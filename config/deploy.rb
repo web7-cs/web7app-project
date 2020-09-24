@@ -13,7 +13,8 @@ append :linked_dirs, "log", "tmp", "public/system", "public/assets", "public/pac
 
 set :keep_releases, 5
 
-after 'deploy:publishing', 'puma:restart'
+after 'deploy', 'puma:start'
+#after 'deploy:publishing', 'puma:restart'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
