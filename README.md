@@ -1,11 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a web application of group 7. 
+
+Team members:
+* Panuvit Chantara st121410
+* Smrity Baral 
+
+Web Application Engineering - August 2020
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : 2.7.1
 
 * System dependencies
 
