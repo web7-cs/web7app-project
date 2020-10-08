@@ -5,32 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Divide by Zero</title>
 </head>
-<body>
-  <p>Result : <%= @message %> </p>
-</body>
-<%= link_to "Home", home_index_path,:class=>'text-center' %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Division Exception</span>
+</span>
+<a class="nav-link" href="#"><%= link_to "Back", basics_index_path %></a>
+</nav>
+  <body>
+    <div class='container-fluid h-100'>
+      <div class='centerDiv'>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class='col-lg-10 align-self-end'>
+          <h5 class='display-5'>Result : <%= @message %></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer style="height:auto">
-<a href="http://validator.w3.org/check?uri=sitename&charset=%28detect+automatically%29&doctype=Inline&group=0">XHTML Validation</a>
-</footer>

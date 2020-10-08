@@ -4,12 +4,20 @@
     <title>Web7app</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'  %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class='centerDiv'>
+      <%= yield %>
+    </div>
   </body>
+  <div class='footer'>
+      <p>
+        <a href="https://validator.w3.org/check?uri=referer"><img
+            src="http://www.w3.org/Icons/valid-xhtml11.png"
+            alt="Valid XHTML 1.1!" height="31" width="88" /></a>
+      </p>
+  </div>
 </html>
