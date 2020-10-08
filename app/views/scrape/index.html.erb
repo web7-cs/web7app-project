@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simple Scarping</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .title {
+            padding: 10px;
+            color: maroon;
+            background-color: lavender;
+            border: 1px solid;
+            box-shadow: 3px 2px 2px 1px darkgoldenrod;
+            border-radius: 5px;
+            font-size: 22px;
+            font-style: italic;
+            text-shadow: 1px 1px lawngreen;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Scrapping</h1>
+
+        <h1 class="title">Title : <%= @title %> </h1>
+        <!--<p style="color:blue">Image Url : <%= @imageUrl %></p>-->
+
+
+        <img class="mt-4" src=<%= @imageUrl %>>
+        <div>
+            <p class="mt-5" style="font-size:16px;"> <strong> News Content </strong> : <%= @content %> </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
