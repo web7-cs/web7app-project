@@ -4,7 +4,7 @@ require 'open-uri'
 class ScrapeController < ApplicationController
   
   def index
-    page = Nokogiri::HTML(open("https://www.foxnews.com/world"))
+    page = Nokogiri::HTML(open("https://www.foxnews.com/world", proxy: URI.parse("http://192.41.170.23:3128"))
     @title = page.css("#wrapper > div.page > div.page-content > div > main > div:nth-child(1) > div > article > div.info > header > h2 > a").text
     content_page = page.css("#wrapper > div.page > div.page-content > div > main > div:nth-child(1) > div > article > div.info > header > h2 > a").attr('href')
 
