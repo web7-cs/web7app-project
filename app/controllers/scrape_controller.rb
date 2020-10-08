@@ -13,7 +13,7 @@ class ScrapeController < ApplicationController
     else
       content_page = 'https://www.foxnews.com' + '' + content_page
     end
-    content_page_url = Nokogiri::HTML(open(content_page))
+    content_page_url = Nokogiri::HTML(open(content_page, proxy: URI.parse("http://192.41.170.23:3128"))
     @content = content_page_url.css("#wrapper > div.page-content > div.row.full > main > article > div > div.article-content > div.article-body > p").text
     @imageUrl = page.css("#wrapper > div.page > div.page-content > div > main > div:nth-child(1) > div > article > div.m > a > picture > img").attr('src')
   end
