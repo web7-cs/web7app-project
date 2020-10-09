@@ -76,7 +76,13 @@
       <tr>
         <td scope='row'>1</td>
         <td scope='row'>Articles</td>
-        <td scope='row'>-</td>
+        <td scope='row'>
+          We create a controller for web scrapping explicitly.
+          Then, we use <mark>Nokogiri</mark> to fetch the website data.
+          Also, we use <mark>open-uri</mark> to connect the proxy through URL because we had some trouble when we launch 
+          a web scrapping in the server. In addition, we learnt from many tutorials and read Nokogiri documents as well.
+          <strong>For turther reading:</strong> https://nokogiri.org/tutorials/parsing_an_html_xml_document.html
+        </td>
         <td scope='row'><%= link_to "Article" ,scrape_index_path %></td>
         <td scope='row'><span class="badge badge-success">Success</span></td>
       </tr>
