@@ -1,6 +1,6 @@
 class ScrapeController < ApplicationController
   require 'nokogiri'
-
+  require 'open-uri'
   def index
     page = Nokogiri::HTML(open("https://www.foxnews.com/world"))
     @title = page.css("#wrapper > div.page > div.page-content > div > main > div:nth-child(1) > div > article > div.info > header > h2 > a").text

@@ -28,7 +28,7 @@
 
 
   <!-- Header -->
-  <body>
+  <footer>
     <div class='container-fluid h-100'>
       <div class='centerDiv'>
         <div class="row h-100 align-items-center justify-content-center text-center">
@@ -41,7 +41,7 @@
     </div>
 
 <!-- Footer -->
-<footer>
+<body>
   <div class='container'>
   <div class='small text-center text-muted'>Created by Panuvit Chantara & Smrity Baral</div>
   <%= link_to "Home", home_index_path,:class=>'text-center' %>
@@ -63,22 +63,40 @@
 
     <tr>
       <td>Articles</td>
-      <td>////</td>
-      <td><%= link_to "Article" ,scrape_index_path %></td>ra
+      <td>We have used Nokogiri Ruby gem file for Scrapping and fetching the title and images.This gem file had  <br> made it eaier
+        for web scrapping.</td>
+      <td><%= link_to "Article" ,scrape_index_path %></td>
+      <td> </td>
     </tr>
     <tr>
-      <td>XHTML VAlIDATION</td>
-      <td>////</td>
+      <td>XHTML_VALIDATION</td>
+      <td>Every XHTML document is validated against a Document Type Definition.We have used https://validator.w3.org/<br>This tool is very handy and helps you to fix the problems with your document.
+        This tool does not require any expertise to perform validation.
+
+      </td>
       <td><a href="https://validator.w3.org/">Validation</a></td>
 
   </table>
-
+  </body>
 </footer>
-    <%# <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>%>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: white;
+          color: black;
+          text-align: center;
+      }
+  </style>
+  </head>
 
+  <body>
+
+  <div class="footer">
+    <a href="https://validator.w3.org/" class="active">XHTML VALIDATION</a>
+  </div>
   </body>
 </html>

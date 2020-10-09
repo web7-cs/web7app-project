@@ -21,7 +21,8 @@ class DivisorController < ApplicationController
       end
 
     rescue ZeroDivisionError => e
-      @message = "Opps ZeroDivisionError Occured. Please check error.log for more information"
+      #@message = "Opps ZeroDivisionError Occured. Please check the details for more info"
+      @message =File.read('log/error.log')
     else
       @message = 	(numerator / denominator)
     end
