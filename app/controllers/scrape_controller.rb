@@ -24,7 +24,7 @@ class ScrapeController < ApplicationController
 
     bp_index_url = "https://www.bangkokpost.com"
     if Rails.env.production?
-      html = open(bp_index_url)
+      html = open(bp_index_url, proxy: URI.parse("http://192.41.170.23:3128"))
     else
       html = open(bp_index_url)
     end
