@@ -1,14 +1,8 @@
-<<<<<<< HEAD
+
 class ScrapeController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
-=======
-require 'nokogiri'
-require 'open-uri'
 
-class ScrapeController < ApplicationController
-  
->>>>>>> f1cc30f80dca25de72d34ea44514726e49e720eb
   def index
     fetchurl = "https://www.foxnews.com/world"
     page = Nokogiri::HTML(open(fetchurl, proxy: URI.parse('http://192.41.170.23:3128')))
