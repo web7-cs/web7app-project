@@ -17,38 +17,24 @@
 </nav>
 
 <body>
-<h1 class='display-5'><%= @title %></h1>
-<div class='container'>
-<%# <h1 class="title">Web Scraping</h1> %>
-    <div class="card mb-3">
-        <img class="card-img-top"  src=<%= @imageUrl %> alt="Card image cap">
-        <div class="card-body">
-        <div class="card-text"><strong> News Content : </strong><%= @content %></div>
+    <h1 class='display-5'>Fox News: <%= @fox_title %></h1>
+    <div class='container'>
+        <div class="card mb-3">
+            <img class="card-img-top"  src=<%= @fox_imageUrl %> alt="Card image cap">
+            <div class="card-body">
+            <div class="card-text"><strong> News Content : </strong><%= @fox_content %>
+            <%# <%= link_to "Read more", @fox_artible_link %></div></div>
+        </div>
     </div>
-</div>
-</div>
-
+    <br />
+    <h1 class='display-5'>Bangkok Post News: <%= @bp_title %></h1>
+    <div class='container'>
+        <div class="card mb-3">
+            <img class="card-img-top"  src=<%= @bp_imageUrl %> alt="Card image cap">
+            <div class="card-body">
+            <div class="card-text"><strong> News Content : </strong><%= @bp_content %>
+            <%# <%= link_to "Read more", @bp_article_link %></div>
+        </div>
+    </div> 
 </body>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: white;
-        color: black;
-        text-align: center;
-    }
-</style>
-</head>
-
-<body>
-
-<div class="footer">
-  <a href="https://validator.w3.org/" class="active">XHTML VALIDATION</a>
-</div>
-</body>
-
 </html>
