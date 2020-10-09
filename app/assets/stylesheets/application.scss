@@ -14,3 +14,28 @@
  *= require_self
  *= require bootstrap
  */
+
+ .text-center {
+    text-align: center;
+}
+
+.centerDiv {
+    width:60%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+
+.centeredPage {
+    position: fixed; /* or absolute */
+    top: 40%;
+    left: 42%;
+  }

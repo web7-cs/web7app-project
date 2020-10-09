@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%# <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> %>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Basics: Web 7</title>
 
@@ -43,24 +43,61 @@
 <!-- Footer -->
 <body>
   <div class='container'>
-  <div class='small text-center text-muted'>Created by Panuvit Chantara & Smrity Baral</div>
-  <%= link_to "Home", home_index_path,:class=>'text-center' %>
+    <div class='small text-center text-muted'>Created by Panuvit Chantara & Smrity Baral</div>
+    <div class="row h-100 align-items-center justify-content-center text-center"><%= link_to "Home", home_index_path %></div>
   </div>
-  <table style="width:100%">
-    <tr>
-      <th>Name of the Problem</th>
-      <th>Problem_Solution</th>
-      <th>link</th>
-    </tr>
-    <tr>
-      <td>Division_Exception</td>
-      <td>We create a controller for divisor that can do division as well we throws exceptions whenever <br>
-      any Zero division error occurs.If any Zero division error occurs then it shows message about the <br>error to the user
-      and the error is saved inside the log file name error.log else it will show the result to <br> the user.We have used <br>
-      Here we have used a separate log file to track the error and how it is handled.</td>
-      <td>  <%= link_to "Divisor" ,divisor_new_path %></td>
-    </tr>
+  <br>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope='col'>PS</th>
+        <th scope='col'>Name</th>
+        <th scope='col'><div class='text-center'>Problem Solutions</div></th>
+        <th scope='col'>Links</th>
+        <th scope='col'>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope='row'>1</td>
+        <td scope='row'>Division Exception</td>
+        <td scope='row'>
+          We create a controller for divisor that can do 
+          division as well we throws exceptions whenever 
+          any Zero division error occurs. If any Zero division 
+          error occurs, then it shows message about the error 
+          to the user and the error is saved inside the log file name 'error.log' 
+          else it will show the result to the user. We have used Here we have 
+          used a separate log file to track the error and how it is handled.
+        </td>
+        <td scope='row'><%= link_to "Divisor" ,divisor_new_path %></td>
+        <td scope='row'><span class="badge badge-success">Success</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>1</td>
+        <td scope='row'>Articles</td>
+        <td scope='row'>-</td>
+        <td scope='row'><%= link_to "Article" ,scrape_index_path %></td>
+        <td scope='row'><span class="badge badge-success">Success</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>2</td>
+        <td scope='row'>-</td>
+        <td scope='row'>-</td>
+        <td scope='row'></td>
+        <td scope='row'><span class="badge badge-warning">Pending</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>3</td>
+        <td scope='row'>-</td>
+        <td scope='row'>-</td>
+        <td scope='row'></td>
+        <td scope='row'><span class="badge badge-warning">Pending</span></td>
+      </tr>
+    </tbody>
+  </table>
 
+<<<<<<< HEAD
     <tr>
       <td>Articles</td>
       <td>We have used Nokogiri Ruby gem file for Scrapping and fetching the title and images.This gem file had  <br> made it eaier
@@ -78,6 +115,11 @@
 
   </table>
   </body>
+=======
+
+  
+
+>>>>>>> f1cc30f80dca25de72d34ea44514726e49e720eb
 </footer>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
