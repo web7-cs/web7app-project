@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author name:</strong>
+  <%= @quotation.author_name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @quotation.category %>
+</p>
+
+
+<p>
+  <strong>Quotation:</strong>
+  <%= @quotation.quotation %>
+</p>
+
+<%= link_to 'Edit', edit_quotation_path(@quotation) %> |
+<%= link_to 'Back', quotations_path %>

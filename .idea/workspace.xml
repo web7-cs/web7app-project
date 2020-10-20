@@ -27,12 +27,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3198b0c9-5443-406a-a772-b8ad90832ab1" name="Default Changelist" comment="Smrity - Change message in Basic">
+      <change afterPath="$PROJECT_DIR$/app/views/quotations/sort.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20201018152039_create_quotations.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/basics/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/basics/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ERB File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,11 +56,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db/migrate" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/migrate" />
       <recent name="$PROJECT_DIR$/app/views/scrape" />
       <recent name="$PROJECT_DIR$/app/views/divisor" />
     </key>
@@ -166,6 +179,8 @@
       <workItem from="1602160636585" duration="1138000" />
       <workItem from="1602202304561" duration="3092000" />
       <workItem from="1602419944849" duration="1074000" />
+      <workItem from="1603194360111" duration="50000" />
+      <workItem from="1603194427278" duration="4397000" />
     </task>
     <task id="LOCAL-00001" summary="Smrity - Change message in Basic">
       <created>1602420492400</created>
@@ -212,6 +227,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Smrity - Change message in Basic" />
@@ -226,5 +242,19 @@
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state x="697" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1792.1095@0.25.1792.1095" timestamp="1602420428589" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/quotations/index.html.erb</url>
+          <line>15</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
