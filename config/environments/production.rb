@@ -110,7 +110,10 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  Raven.configure do |config|
-    config.dsn = 'https://38f55fa385b94b119b524a8540fedb42@o445741.ingest.sentry.io/5422699'
-    config.proxy = 'https://192.41.170.23:3128'
+  
 end
+
+Raven.configure do |config|
+  config.dsn = 'https://38f55fa385b94b119b524a8540fedb42@o445741.ingest.sentry.io/5422699'
+  config.proxy = 'https://192.41.170.23:3128'
+end  

@@ -60,6 +60,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
-  Raven.configure do |config|
-    config.dsn = 'https://38f55fa385b94b119b524a8540fedb42@o445741.ingest.sentry.io/5422699'
+  
 end
+
+Raven.configure do |config|
+  config.dsn = 'https://38f55fa385b94b119b524a8540fedb42@o445741.ingest.sentry.io/5422699'
+end  
