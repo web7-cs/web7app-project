@@ -1,0 +1,107 @@
+<%# <h1>Basics#index</h1>
+<p>Find me in app/views/basics/index.html.erb</p> %>
+<%# <%= link_to "Home", home_index_path%>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Basics: Web 7</title>
+
+    <!-- style -->
+    <style type='text/css'>
+      .centerDiv
+      {
+        width:60%;
+        height: 300px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <!--Nav-->
+
+
+
+  <!-- Header -->
+<!--  <footer>-->
+    <div class='container-fluid h-100'>
+      <div class='centerDiv'>
+        <div class="row h-100 align-items-center justify-content-center text-center">
+          <div class='col-lg-10 align-self-end'>
+          <h1 class='display-1'>Basic</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Footer -->
+<body>
+  <div class='container'>
+    <div class='small text-center text-muted'>Created by Panuvit Chantara & Smrity Baral</div>
+    <div class="row h-100 align-items-center justify-content-center text-center"><%= link_to "Home", home_index_path %></div>
+  </div>
+  <br>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope='col'>PS</th>
+        <th scope='col'>Name</th>
+        <th scope='col'><div class='text-center'>Problem Solutions</div></th>
+        <th scope='col'>Links</th>
+        <th scope='col'>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope='row'>1</td>
+        <td scope='row'>Division Exception</td>
+        <td scope='row'>
+          We create a controller for divisor that can do division.
+          Whenever any Zerodivision error occurs,
+          it shows the details about the error,
+          the error is saved inside the log file name 'error.log'-
+          a separate log file, else it will show the result to the  the user.
+          It helped us to learn about error and exceptions.
+        </td>
+        <td scope='row'><%= link_to "Divisor" ,divisor_new_path %></td>
+        <td scope='row'><span class="badge badge-success">Success</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>1</td>
+        <td scope='row'>Articles</td>
+        <td scope='row'>
+          We create a controller for web scrapping explicitly.
+          Then, we use <mark>Nokogiri</mark> to fetch the website data.
+          Also, we use <mark>open-uri</mark> to connect the proxy through URL because we had some trouble when we launch 
+          a web scrapping in the server. In addition, we learnt from many tutorials and read Nokogiri documents as well.
+          <strong>For turther reading:</strong> https://nokogiri.org/tutorials/parsing_an_html_xml_document.html
+        </td>
+        <td scope='row'><%= link_to "Article" ,scrape_index_path %></td>
+        <td scope='row'><span class="badge badge-success">Success</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>2</td>
+        <td scope='row'>Quotations</td>
+        <td scope='row'>-</td>
+        <td scope='row'><%= link_to "Quotations" ,quotations_path %></td>
+        <td scope='row'><span class="badge badge-warning">Pending</span></td>
+      </tr>
+      <tr>
+        <td scope='row'>3</td>
+        <td scope='row'>-</td>
+        <td scope='row'>-</td>
+        <td scope='row'></td>
+        <td scope='row'><span class="badge badge-warning">Pending</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <footer>
+  <br />
+  <br />
+  </footer>
+</html>
