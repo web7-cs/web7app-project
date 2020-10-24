@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web7app</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="wHFFZM2QOsdfs3+Wak82caFSmAVzOxEHjfZP8OxKV+UlH7QOcydnyIVwy/MyqeNYaTt5Lz2MQFcEtT98JNMWDw==" />
+    
+    <link rel="stylesheet" media="all" href="/assets/application.debug-9675b87e2dc1fe7bc6c41bc9f99ece2b102f3408f1a567476d949a2b3ee8185d.css" data-turbolinks-track="reload" />
+    <script src="/packs/js/application-8e3d2ae13501c140e711.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <div class='centerDiv'>
+      <p id="notice"></p>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">SQL Solutions</span>
+      <a class="nav-link" href="#"><%= link_to "Back", basics_index_path %></a>
+      </nav>
+
+<p>
+  <h1>SQL Solutions</h1><div><br></div><ul><li>First we have a content of <strong>stocksample.txt</strong> shows about stock prices.</li></ul><pre>      ADVANC  100    12/01/2020
+      BANPU   1200   12/12/2020
+      JMT     100    09/11/2020
+      SCC     200    08/29/2020
+      SUPER   100    08/19/2020</pre><ul><li>Then we use query to copy data from txt file.</li></ul><pre>\copy my_stocks FROM 'stocksample.txt' (DELIMITER(E'\t'));</pre><ul><li>For create a table named stock_prices with current_date as default value and some default price, use query </li></ul><pre>create table stock_prices as
+          select symbol, current_date as quote_date ,36.256 as price
+          from my_stocks;</pre><ul><li>Create new table name newly_acquired_stocks using query </li></ul><pre>create table newly_acquired_stocks (
+            symbol                varchar(20) not null,
+            number_of_shares      integer     not null,
+            date_import           date    not null
+          ); </pre><ul><li>Perform an insert into ... select ... statement (with a WHERE clause appropriate to your sample data), copy about half the rows from my stocks into newly acquired stocks with the query</li></ul><pre>insert into newly_acquired_stocks ( symbol, n_shares, date_acquired )
+          select symbol, n_shares, date_import from my_stock limit (
+            select count(*) from my_stock
+          )/2; </pre><ul><li>
+<strong>JOIN: </strong>With a single SQL statement JOINing my stocks and stock prices, produce a report showing symbol, number of shares, price per share, and current value by using query </li></ul><pre>select my_stocks.symbol, n_shares, price, n_shares*price as current_value
+      from my_stocks join stock_prices on stock_prices.symbol= my_stocks.symbol; </pre><div>
+<strong>Execution result :<br></strong><br>
+</div><pre>      symbol  | n_shares  | price | current_value
+      --------+----------+--------+---------------
+      ADVANC  |   100     | 18.29 |    171.12
+      BANPU   |   1200    | 18.29 |    183.12
+      JMT     |   100     | 18.29 |    82.12
+      SCC     |   200     | 18.29 |    123.12
+      SUPER   |   100     | 18.29 |    92.12</pre><ul>
+<li>
+<strong>OUTER JOIN</strong>: Insert a row into my stocks. Rerun your query from the previous exercise. Notice that your new stock does not appear in the report. </li>
+<li>Perform the given task using query:</li>
+</ul><pre>insert into my_stocks
+          values ( 'BOYD' , 500, '09/12/2020'); </pre><ul>
+<li>Modify your statement to use an <strong>OUTER JOIN</strong> instead so that you’ll get a complete report of all your stocks, but won’t get price information if none is available. </li>
+<li>Perform the given task using query: </li>
+</ul><pre>select my_stocks.symbol, n_shares, price, n_shares*price as current_value
+          from my_stocks full outer join stock_prices on stock_prices.symbol = my_stocks.symbol; </pre><div>
+<strong>Execution result : </strong><br><br>
+</div><pre>      symbol  | n_shares  | price | current_value
+      --------+----------+--------+---------------
+      ADVANC  |   100     | 18.29 |    171.12
+      BANPU   |   1200    | 18.29 |    183.12
+      JMT     |   100     | 18.29 |    82.12
+      SCC     |   200     | 18.29 |    123.12
+      SUPER   |   100     | 18.29 |    92.12
+      BOYD    |   500</pre><ul><li>Define function ascii_sum to calculate the summation of character ascii value by using query:</li></ul><pre>create function ascii_sum(symbol text)
+          returns int
+          language plpgsql
+          as
+          $$
+          declare
+            ascii_count integer;
+          begin
+            select sum(ascii(char_list))
+            into ascii_count
+            from regexp_split_to_table('IBM', '') as char_list;
+
+            return ascii_count;
+          end;
+          $$;</pre><ul><li>Update the stocks price by using function ascii_sum via query:</li></ul><pre>update stock_prices
+          set price = ascii_sum(symbol); create function portfolio_value()
+          returns table (
+            symbol varchar,
+            portfolio_value numeric
+          )
+          language plpgsql
+          as
+          $$
+          begin
+            return query select
+              my_stocks.symbol, n_shares*price as portfolio_value
+                  from my_stocks join stock_prices
+                  on stock_prices.symbol = my_stocks.symbol;
+          end;
+          $$;</pre><blockquote>"<strong>Buy More of the Winners:</strong> Rather than taking your profits on the winners, buy more of them! Use SELECT AVG() to figure out the average price of your holdings. Using a single INSERT with SELECT statement, double your holdings in all the stocks whose price is higher than average (with date acquired set to current date). Perform the given task using query :"</blockquote><pre>insert into my_stocks
+        select symbol, n_shares, current_date from my_stocks
+        where symbol
+        in (
+          select symbol from stock_prices where price &gt; (
+            select avg(price)
+            from stock_prices
+          )
+        );</pre><div>Rerun the query in number 10...  <strong>Rerun result is shown below</strong>
+</div><pre>      symbol  | n_shares  | price | current_value
+      --------+----------+--------+---------------
+      ADVANC  |   100     | 18.29 |    400.12
+      BANPU   |   1200    | 18.29 |    300.12
+      JMT     |   100     | 18.29 |    100.12
+      SCC     |   200     | 18.29 |    50.12
+      SUPER   |   100     | 18.29 |    12.12
+      BOYD    |   500     | 18.29 |    0.12
+      ADVANC  |   100     | 18.29 |    400.12
+      BANPU   |   1200    | 18.29 |    300.12</pre><ul><li>Use a select ... group by ... query from my stocks to produce a report of symbols and total shares held. Using query:</li></ul><pre> select symbol, sum(n_shares) as total_shares_held from my_stocks group by symbol; </pre><div>
+<strong>Query execution results:<br></strong><br>
+</div><pre>           symbol | total_shares_held
+          --------+-------------------
+           ADVANC |               200
+           BANPU  |              2400
+           JMT    |               100
+           SCC    |               200
+           SUPER  |               100
+           BOYD   |               500</pre><ul><li>Use a select ... group by ... query JOINing with stock prices to produce a report of symbols and total value held per symbol. Using query:</li></ul><pre>select my_stocks.symbol, sum(n_shares*price) as total_value
+          from my_stocks inner join stock_prices
+          on stock_prices.symbol = my_stocks.symbol
+          group by my_stocks.symbol;</pre><div>
+<strong>Query execution results:<br></strong><br>
+</div><pre>           symbol |     total_value
+          --------+-------------------
+           ADVANC |        3,658
+           BANPU  |       43,896
+           JMT    |        1,829
+           SCC    |        3,658
+           SUPER  |        1,829
+           BOYD   |        9,145</pre><div>Use a select ... group by ... having ... query to produce a report of symbols, total shares held, and total value held per symbol restricted to symbols in which you have at least two blocks of shares (i.e., the “winners”). Using query:<br><br>
+</div><pre> select my_stocks.symbol, sum(n_shares) as total_shares_held, sum(n_shares*price) as total_value
+          from my_stocks inner join stock_prices
+          on stock_prices.symbol = my_stocks.symbol
+          group by my_stocks.symbol
+          having count(*) &gt;= 2;</pre><div>
+<strong>Query execution result:<br></strong><br>
+</div><pre>           symbol | total_shares_held | total_value
+          --------+-------------------+-------------
+           ADVANC |            200    |       3,658
+           BANPU  |            2,400  |      43,896</pre><div>Encapsulate your queries with a view: Using the final query above, create a view called stocks i like that encapsulates the final query.<br><br><br>
+</div><pre>create view stocks_i_like as
+      select my_stocks.symbol, sum(n_shares) as total_shares_held, sum(n_shares*price) as total_value
+      from my_stocks inner join stock_prices
+      on stock_prices.symbol = my_stocks.symbol
+      group by my_stocks.symbol
+      having count(*) &gt;= 2</pre><div>Using select query to verify that the view has been created via query:<br><br>
+</div><pre>select * from stocks_i_like;</pre><div>
+<strong>Query execution result<br></strong><br>
+</div><pre>           symbol | total_shares_held | total_value
+          --------+-------------------+-------------
+           ADVANC |            200    |       3,658
+           BANPU  |            2,400  |      43,896</pre>
+</p>
+
+<br/>
+<br/>
+<br/>
+
+</html>
