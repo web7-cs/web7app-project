@@ -1,71 +1,81 @@
 <head>
-  <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Quatations</span>
-</span>
+  <span class="navbar-brand mb-0 h1">Quotations</span>
 <a class="nav-link" href="#"><%= link_to "Back", basics_index_path %></a>
 </nav>
 
-<div class="container">
-  <% if notice %>
-    <div class="alert alert-success" role="alert" style="margin-top:8px">
-      <%= notice %>
-    </div>
-  <% end %>
-  <h1>Quotations</h1>
-  <form class="form-inline" method="POST" action='search'>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <input class="form-control form-control-sm w-40" type="text" name="search" placeholder="Search" aria-label="Search">
-    <input class="btn btn-primary btn-sm form-control ml-1 mt-2 w-30" type="submit" name="submit" value="Search">
-  </form>
 
-  <div>
+<div class="container">
+    <% if notice %>
+    <div class="alert alert-success" role="alert" style="margin-top:8px">
+        <%= notice %>
+    </div>
+    <% end %>
+    <h1>Quotations</h1>
+    <form class="form-inline" method="POST" action='search'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input class="form-control form-control-sm w-40" type="text" name="search" placeholder="Search" aria-label="Search">
+        <input class="btn btn-primary btn-sm form-control ml-1 mt-2 w-30" type="submit" name="submit" value="Search">
+    </form>
+
+    <%
+=begin%>
+    <form class="form-inline" method="POST" action='sort'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="hidden" name="sort" value=<%= @sort ? @sort : '' %>>
+        <input class="btn btn-warning btn-sm mt-3 form-control" type="submit" name="submit" value="Sort by date">
+    </form>
+    <%
+=end%>
+<div>
     <h3> Download </h3>
     <%= link_to "XML", quotations_path + ".xml" %>
-    <%= link_to "JSON", quotations_path + ".json" %>
-  </div>
-  <div>
+<%= link_to "JSON", quotations_path + ".json" %>
+</div>
+<div>
     <h3>
-      <a href="/sort?sort_name=<%= @sort_by ? @sort_by : 'date' %>" class="btn btn-warning btn-sm mt-3 mb-2">
+    <a href="/sort?sort_name=<%= @sort_by ? @sort_by : 'date' %>" class="btn btn-warning btn-sm mt-3 mb-2">
         Sort by <%= @sort_by ? @sort_by : 'date' %>
-      </a>
-    </h3>
-  </div>
-  <% if session[:destroy] %>
+    </a>
+</h3>
+</div>
+    <% if session[:destroy] %>
     <div class="erase" style='margin:3px'>
-      <form method="POST" action='erase_personalization'>
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input type="hidden" name="cookies" value="GET_COOKIES">
-        <input class="btn btn-danger" type="submit" name="submit" value="Erase my personalization">
-      </form>
+        <form method="POST" action='erase_personalization'>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <input type="hidden" name="cookies" value="GET_COOKIES">
+            <input class="btn btn-danger" type="submit" name="submit" value="Erase my personalization">
+        </form>
     </div>
-  <% end %>
-
-  <br>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>Author name</th>
-      <th>Category</th>
-      <th>Quotation</th>
-      <th colspan="3" class="fix" style="text-align: center;">Actions</th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @quotations.each do |quotation| %>
-      <tr>
-        <td><%= quotation.author_name %></td>
-        <td><%= quotation.category %></td>
-        <td><%= quotation.quotation %></td>
-        <td><%= link_to 'Show', quotation %></td>
-        <td><%= link_to 'Edit', edit_quotation_path(quotation) %></td>
-        <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-    </tbody>
-  </table>
 
-  <%= link_to 'New Quotation', new_quotation_path, class:"btn btn-primary" %>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Author name</th>
+                <th>Category</th>
+                <th>Quotation</th>
+                <th colspan="3" class="fix" style="text-align: center;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @quotations.each do |quotation| %>
+            <tr>
+                <td><%= quotation.author_name %></td>
+                <td><%= quotation.category %></td>
+                <td><%= quotation.quotation %></td>
+                <td><%= link_to 'Show', quotation %></td>
+                <td><%= link_to 'Edit', edit_quotation_path(quotation) %></td>
+                <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <%= link_to 'New Quotation', new_quotation_path, class:"btn btn-primary" %>
+    <%= link_to 'Back', quotations_path %>
 </div>

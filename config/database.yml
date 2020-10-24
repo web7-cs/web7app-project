@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: web7app_project_production
-  username: web7app_project
-  password: <%= ENV['WEB7APP_PROJECT_DATABASE_PASSWORD'] %>
+  username: deploy
+  password: Admin Web07 CS AIT
+  # password: <%= ENV['WEB7APP_PROJECT_DATABASE_PASSWORD'] %>
