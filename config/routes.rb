@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   post '/erase_personalization', to: 'quotations#index'
   get '/erase_personalization', to: 'quotations#index'
   get 'quotations/delete', to: 'quotations#destroy'
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   resources :divisor
   get 'scrape/index', to: 'scrape#index'
   post '/divisor/evaluate', to: 'divisor#evaluate'
+
+  resources :ps3
   
 
   root to: 'home#index'
