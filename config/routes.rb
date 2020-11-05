@@ -21,7 +21,6 @@ Rails.application.routes.draw do
 
   resources :ps3
   
-
   root to: 'home#index'
   # root to: 'quotations#index'
     # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
