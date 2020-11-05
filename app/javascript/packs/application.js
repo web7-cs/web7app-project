@@ -18,12 +18,8 @@ require("channels")
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-<<<<<<< HEAD
-//= require_tree .
-=======
 //= require_tree .
 import "controllers"
 
 require("trix")
 require("@rails/actiontext")
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
