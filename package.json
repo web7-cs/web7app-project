@@ -1,16 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "web7app",
-  "private": true,
-  "dependencies": {
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^5.2.1",
-    "bootstrap": "4.3.1",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-=======
   "name": "web7app_project",
   "private": true,
   "dependencies": {
@@ -24,7 +12,6 @@
     "popper.js": "^1.16.1",
     "stimulus": "^1.1.1",
     "trix": "^1.2.0",
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
