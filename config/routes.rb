@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'sqlsolution/index'
+  get '/sql', to: 'sqlsolution#index'
   resources :posts
   post '/erase_personalization', to: 'quotations#index'
   get '/erase_personalization', to: 'quotations#index'
