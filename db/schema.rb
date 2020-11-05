@@ -10,17 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_10_18_152039) do
-=======
 ActiveRecord::Schema.define(version: 2020_10_24_134803) do
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -59,7 +53,6 @@ ActiveRecord::Schema.define(version: 2020_10_24_134803) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
   create_table "quotations", force: :cascade do |t|
     t.string "author_name"
     t.text "category"
@@ -69,8 +62,5 @@ ActiveRecord::Schema.define(version: 2020_10_24_134803) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-<<<<<<< HEAD
-=======
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
 end

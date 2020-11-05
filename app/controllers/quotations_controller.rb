@@ -1,10 +1,4 @@
 class QuotationsController < ApplicationController
-<<<<<<< HEAD
-=======
-  skip_before_action :verify_authenticity_token
-  # skip_before_action :verify_authenticity_token, raise: false
-  # skip_after_action :verify_authorized
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
   before_action :set_quotation, only: [:show, :edit, :update, :destroy]
 
   # GET /quotations
