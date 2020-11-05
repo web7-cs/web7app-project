@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Web7app</title>
-    <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="wHFFZM2QOsdfs3+Wak82caFSmAVzOxEHjfZP8OxKV+UlH7QOcydnyIVwy/MyqeNYaTt5Lz2MQFcEtT98JNMWDw==" />
-    
-    <link rel="stylesheet" media="all" href="/assets/application.debug-9675b87e2dc1fe7bc6c41bc9f99ece2b102f3408f1a567476d949a2b3ee8185d.css" data-turbolinks-track="reload" />
-    <script src="/packs/js/application-8e3d2ae13501c140e711.js" data-turbolinks-track="reload"></script>
-  </head>
-
-  <body>
-    <div class='centerDiv'>
-      <p id="notice"></p>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">SQL Solutions</span>
-      <a class="nav-link" href="#"><%= link_to "Back", basics_index_path %></a>
-      </nav>
-
+<% provide(:title,'SQL Solution')%>
+<%= render 'layouts/headers'%>
+<div class='centerDiv'>
 <p>
   <h1>SQL Solutions</h1><div><br></div><ul><li>First we have a content of <strong>stocksample.txt</strong> shows about stock prices.</li></ul><pre>      ADVANC  100    12/01/2020
       BANPU   1200   12/12/2020
@@ -156,5 +139,3 @@
 <br/>
 <br/>
 <br/>
-
-</html>
