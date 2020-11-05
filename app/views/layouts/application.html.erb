@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web7app</title>
+    <title><%= full_title(yield(:title))%></title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
-    <div class='centerDiv'>
-      <%= yield %>
-    </div>
+      <div class='centerDiv'>
+        <div class="row h-100 justify-content-center">
+          <div class='col-lg-10 align-self-end'>
+          <%= yield %>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <%= render 'layouts/footer'%>
   </body>
-  <div class='footer'>
-      <p>
-        <a href="https://validator.w3.org/check?uri=referer"><img
-            src="http://www.w3.org/Icons/valid-xhtml11.png"
-            alt="Valid XHTML 1.1!" height="31" width="88" /></a>
-      </p>
-  </div>
 </html>

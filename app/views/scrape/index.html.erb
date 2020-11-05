@@ -1,44 +1,19 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Simple Scraping</title>
-</head>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">Web Scraping</span>
-  <span class="navbar-text">
-      Here the example of web scrapping.
-</span>
-<a class="nav-link" href="#"><%= link_to "Back", basics_index_path %></a>
-</nav>
-
-<body>
-    <h1 class='display-5'>Fox News: <%= @fox_title %></h1>
+<% provide(:title,'Simple Scraping')%>
+<%= render 'layouts/header'%>
+<h1 class='display-4 text-center'>Fox News: <%= @fox_title %></h1>
     <div class='container'>
         <div class="card mb-3">
-            <img class="card-img-top"  src=<%= @fox_imageUrl %> alt="Card image cap">
-            <div class="card-body">
-            <div class="card-text"><strong> News Content : </strong><%= @fox_content %>
-            <%# <%= link_to "Read more", @fox_artible_link %></div></div>
+                <img class="card-img-top"  src=<%= @fox_imageUrl %> alt="Card image cap">
+                <div class="card-body">
+                    <div class="card-text"><strong> News Content : </strong><%= @fox_content %></div>
+            </div>
         </div>
-    </div>
+
     <br />
-    <h1 class='display-5'>Bangkok Post News: <%= @bp_title %></h1>
-    <div class='container'>
+    <h1 class='display-4 text-center'>Bangkok Post News: <%= @bp_title %></h1>
         <div class="card mb-3">
-            <img class="card-img-top"  src=<%= @bp_imageUrl %> alt="Card image cap">
+            <img class="card-img-top" src=<%= @bp_imageUrl %> alt="Card image cap">
             <div class="card-body">
             <div class="card-text"><strong> News Content : </strong><%= @bp_content %>
-            <%# <%= link_to "Read more", @bp_article_link %></div>
+            </div>
         </div>
-    </div> 
-</body>
-  <footer>
-  <br />
-  <br />
-  </footer>
-</html>

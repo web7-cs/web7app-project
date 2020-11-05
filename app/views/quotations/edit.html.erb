@@ -1,9 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar">
   <span class="navbar-brand mb-0 h1">Quatations</span>
+  <span><%= link_to 'Back', quotations_path %></span>
 </span>
-
-<h1>Editing Quotation</h1>
-
-<%= render 'form', quotation: @quotation %>
-<%= link_to 'Back', quotations_path %>
 </nav>
+<h1>Editing Quotation</h1>
+<%= render 'form', quotation: @quotation %>
