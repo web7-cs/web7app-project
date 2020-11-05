@@ -1,4 +1,5 @@
 class QuotationsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_quotation, only: [:show, :edit, :update, :destroy]
 
   # GET /quotations
@@ -44,15 +45,9 @@ class QuotationsController < ApplicationController
   def create
     @quotation = Quotation.new(quotation_params)
     respond_to do |format|
-<<<<<<< HEAD
       if params[:newcategory][:id]
         @quotation.category = params[:newcategory][:id]
       end
-=======
-       if params[:newcategory][:id]
-        @quotation.category = params[:newcategory][:id]
-       end
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
       if @quotation.save
         format.html { redirect_to @quotation, notice: 'Quotation was successfully created.' }
         format.json { render :show, status: :created, location: @quotation }
@@ -100,11 +95,7 @@ class QuotationsController < ApplicationController
       cook = cookies[:quotations].split(',').map(&:to_i)
       @quotations = Quotation.where.not(id: cook).where("author_name LIKE ?", "%#{search}%").to_a
     else
-<<<<<<< HEAD
       @quotations = Quotation.where("author_name LIKE ?", "%#{search}%").to_a
-=======
-       @quotations = Quotation.where("author_name LIKE ?", "%#{search}%").to_a
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
     end
     render 'index'
   end
@@ -136,10 +127,6 @@ class QuotationsController < ApplicationController
     render 'sort'
   end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quotation
@@ -148,12 +135,6 @@ class QuotationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quotation_params
-<<<<<<< HEAD
       params.require(:quotation).permit(:author_name, :category, :newcategory, :quotation)
     end
 end
-=======
-      params.require(:quotation).permit(:author_name, :category, :quotation)
-    end
-end
->>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
