@@ -5,6 +5,7 @@ ruby '2.7.1'
 
 gem 'trix'
 gem 'pg'
+gem 'sqlite3', '~> 1.4'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'puma', '~> 4.1'
 gem 'bootstrap-sass', '~> 3.4.1'
