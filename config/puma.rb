@@ -34,4 +34,8 @@ plugin :tmp_restart
 
 # Control app
 
+<<<<<<< HEAD
 activate_control_app
+=======
+activate_control_app
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91

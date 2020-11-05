@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+=======
+  get 'sqlsolution/index'
+  resources :posts
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
   post '/erase_personalization', to: 'quotations#index'
   get '/erase_personalization', to: 'quotations#index'
   get 'quotations/delete', to: 'quotations#destroy'
@@ -16,6 +21,11 @@ Rails.application.routes.draw do
   resources :divisor
   get 'scrape/index', to: 'scrape#index'
   post '/divisor/evaluate', to: 'divisor#evaluate'
+<<<<<<< HEAD
+=======
+
+  resources :ps3
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
   
 
   root to: 'home#index'

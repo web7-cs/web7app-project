@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+gem 'trix'
 gem 'pg'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 gem 'puma', '~> 4.1'
@@ -16,10 +17,8 @@ gem 'bcrypt_pbkdf', '>=1.0','<2.0'
 gem 'nokogiri', '~> 1.10', '>= 1.10.10'
 gem 'sentry-raven', '~> 3.0', '>= 3.0.4'
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'bootstrap-sass', '~> 3.4.1'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -42,5 +41,4 @@ group :test do
   gem 'webdrivers'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

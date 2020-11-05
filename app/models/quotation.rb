@@ -1,4 +1,5 @@
 class Quotation < ApplicationRecord
+<<<<<<< HEAD
     validates :author_name, :category, :quotation, presence: true
 
     # params is object return from strong parameter method
@@ -12,4 +13,6 @@ class Quotation < ApplicationRecord
         params.delete "newcategory"
         return params
     end
+=======
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
 end

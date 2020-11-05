@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar">
   <span class="navbar-brand mb-0 h1">Quatations Success!</span>
 </span>
@@ -5,6 +6,20 @@
 
 <div class="text-center">
 <p id="notice"><%= notice %></p>
+=======
+<p id="notice"><%= notice %></p>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Quotations</span>
+  <a class="nav-link" href="#"><%= link_to 'Edit', edit_quotation_path(@quotation) %></a>
+<a class="nav-link" href="#"><%= link_to "Back", quotations_path %></a>
+
+
+</nav>
+
+<div class="container">
+<br/>
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
 <p>
   <strong>Author name:</strong>
   <%= @quotation.author_name %>
@@ -20,7 +35,12 @@
   <strong>Quotation:</strong>
   <%= @quotation.quotation %>
 </p>
+<<<<<<< HEAD
 
 <%= link_to 'Edit', edit_quotation_path(@quotation) %> |
 <%= link_to 'Back', quotations_path %>
 </div>
+=======
+</div>
+
+>>>>>>> f43ca1b3958567ad1b0fec7d0e3e88641938fc91
