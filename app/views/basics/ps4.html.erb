@@ -3,11 +3,11 @@
   <span class="navbar-brand mb-0 h1"><%= yield(:title) %></span>
   <span class="justify-end"><%= link_to "Back", root_path %></span>
 </nav>
-<h1 class='display-5'>Website mockup 🖥 <span class='text-muted'>build by Figma.com</span></h1>
+<h1 class='display-5'>Website mockup 🖥 <span class='text-muted'>build in <%=link_to 'Figma.com','https://www.figma.com',target: '_blank'%></span></h1>
 <div class='embed-responsive embed-responsive-16by9 text-center'>
 <iframe class='embed-responsive-item' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FNrzsTF5Np1RiDT7TF4jk6x%2FWebDraft_Version1%3Fnode-id%3D4%253A691%26scaling%3Dscale-down" allowfullscreen></iframe></div>
 <br/>
-<h2 class='display-7'>User Management part</h2>
+<h2 class='display-7'> User Management part</h2>
 <br/>
   <div class="card mt-2 mb-2">
     <div class="card-body">
@@ -19,5 +19,128 @@
         </p>
       </div>
     </div>
+  </div>
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">2</span> All social Web applications have users, content, and some kind of user-to-content map. <br>Specify what kind of information each of these areas will have in your application.</h4>
+        </h3>
+        <dl class="row">
+  <dt class="col-sm-3">If you're a user</dt>
+  <dd class="col-sm-9"><mark>Then you can create</mark>
+    <li>share your interested topic with hashtag which will be used to catagorised as topics later.</li>
+    <li>follow other members to find your intesting topic.</li>
+    <li>use <u>Learning Theories</u> which created by content creator.</li>
+    <li>use <u>Teaching ideas</u> to find teaching techniques based on learning theory.</li>
+  </dd>
+
+  <dt class="col-sm-3">If you're a content creator</dt>
+  <dd class="col-sm-9">
+    <mark>Then you can</mark>
+    <li>share your interested topic with hashtag which will be used to catagorised as topics later.</li>
+    <li>follow other members to find your intesting topic.</li>
+    <li>create <u>Learning Theories</u> for users.</li>
+    <li>create <u>Teaching ideas</u> to help users find teaching technques based on learning theory.</li>
+  </dd>
+
+  <dt class="col-sm-3">If you're an admin</dt>
+  <dd class="col-sm-9">
+    <mark>Then you can create</mark>
+    <li>create add/delete users accounts and content creators account.</li>
+    <li>manage posts that created by users and content creators.</li>
+    <li>manage learning theory posts and teaching ideas posts that created by content creators.</li>
+  </dd>
+</dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">3</span> Learn how to avoid SQL injection and XSS attacks in your development framework and document and follow your plan for the rest of the project.</h4>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">4</span> Audit password security</h4>
+        </h3>
+        <p class='card-text'>Due to Thai's teachers behaviour, we think that we will use <%=link_to 'Devise 4.7.3','https://rubygems.org/gems/devise/versions/4.7.3',raget: '_blank'%> for Rails as the best choice. The password will not be too long and too hard to remember. Therefore, 
+        it is not necessary to use fancy password requirement. Because we know Devise is acceptable secure, we will use it as the main part for password security. 
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">5</span> Define your user data model.</h4>
+        </h3>
+        <%= image_tag 'ps4/user_models.jpeg',class: 'img-fluid',size: '50%xauto'%>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">6</span> Sketch your user registration and management page flow.</h4>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">7, 8</span> Using the techniques of test-first and behavior-driven development we’ve studied in class and lab, build up the basic user registration and login pages. Set up SSL for the login page to prevent password sniffing, and set up SSL for all authenticated interaction if session hijacking is a concern. 
+Again using BDD, build the user administration pages. Make sure admin can 1) see recently registered users, 2) ban a user, and 3) see statistics on user registrations </h4>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">9</span> Use your issue tracker and CI server to their full potential. Start an issue in the issue tracker beforeyou begin any work. Get email notification of broken builds running, and get the CI server to reporttest coverage and code quality metrics.</h4>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">10</span> Check your model for referential integrity and queries that take a long time and might require further optimization</h4>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2 mb-2">
+    <div class="card-body">
+      <div class='col'>
+        <h3 class="card-title"> 
+            <h4><span class="badge badge-primary">11</span> Put your work online and push to your Git repo when you are done. Your site should now contain an index pointing to your “Basics” solutions and the “Documentation” for your site. We should also be able to see that your code and documentation have been checked in to git. Please also provide a link to your latest database dump somewhere on your site so that we can see that you’ve done the data definitions for user registration and management.</h4>
+        </h3>
+      </div>
+    </div>
+  </div>
 
 </div>
