@@ -124,7 +124,7 @@ class QuotationsController < ApplicationController
       @quotations = Quotation.order(created_at: :asc)
     end
     # @quotations = Quotation.all()
-    render 'sort'
+    render "sort"
   end
 
   private
