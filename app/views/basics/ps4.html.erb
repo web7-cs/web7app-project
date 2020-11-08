@@ -1,7 +1,7 @@
 <% provide(:title,'Problem set 4: User Management') %>
 <nav class="navbar">
   <span class="navbar-brand mb-0 h1"><%= yield(:title) %></span>
-  <span class="justify-end"><%= link_to "Back", basics_index_path %></span>
+  <span class="justify-end"><%= link_to "Back", root_path %></span>
 </nav>
 <h1 class='display-5'>Website mockup 🖥 <span class='text-muted'>build by Figma.com</span></h1>
 <div class='embed-responsive embed-responsive-16by9 text-center'>
@@ -20,14 +20,4 @@
       </div>
     </div>
 
-    <div class="card mt-2 mb-2">
-    <div class="card-body">
-      <div class='col'>
-        <h3 class="card-title"> 
-            <h4><span class="badge badge-primary">1</span> Issue Tracker for the project</h4>
-        </h3>
-        <p class='card-text'>We decided to use <%= link_to 'Redmine','https://www.redmine.org',target: '_blank'%> because it can be easily to install to Ruby on Rails, and it could be helpful for us to write in the same syntax.
-        </p>
-      </div>
-    
 </div>

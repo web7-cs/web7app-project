@@ -11,10 +11,9 @@ Rails.application.routes.draw do
   get '/sort/:sort_name', to: 'quotations#sort'
   resources :quotations
 
-  get 'basics/index'
+  get '/', to: 'basics#index'
   get '/ps4', to: 'basics#ps4'
   get '/ps5', to: 'basics#ps5'
-  get 'home/index'
   get 'divisor/new', to: 'divisor#new'
 
   resources :divisor
@@ -23,7 +22,7 @@ Rails.application.routes.draw do
 
   resources :ps3
   
-  root to: 'home#index'
+  root to: 'basics#index'
   # root to: 'quotations#index'
     # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
