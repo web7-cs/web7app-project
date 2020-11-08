@@ -1,6 +1,6 @@
 
 class ScrapeController < ApplicationController
-  require "nokogiri"
+  require 'nokogiri'
   require 'open-uri'
 
   def index
