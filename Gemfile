@@ -19,6 +19,7 @@ gem 'bcrypt_pbkdf', '>=1.0','<2.0'
 gem 'nokogiri', '~> 1.10', '>= 1.10.10'
 gem 'sentry-raven', '~> 3.0', '>= 3.0.4'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootstrap', '~> 4.0.0'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
