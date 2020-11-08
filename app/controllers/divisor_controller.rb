@@ -15,7 +15,7 @@ class DivisorController < ApplicationController
         log.level = Logger::INFO
 
 
-        log.error "About to divide by zero"
+        log.error "About to divide given number by zero"
 
         log.logger(numerator / denominator)
       end
