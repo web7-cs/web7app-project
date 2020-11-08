@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :quotations
 
   get 'basics/index'
+  get '/ps4', to: 'basics#ps4'
+  get '/ps5', to: 'basics#ps5'
   get 'home/index'
   get 'divisor/new', to: 'divisor#new'
 
