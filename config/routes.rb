@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/', to: 'basics#index'
   get '/ps4', to: 'basics#ps4'
   get '/ps5', to: 'basics#ps5'
+  get '/ps6', to: 'basics#ps6'
   get 'divisor/new', to: 'divisor#new'
   get '/scrape', to: 'scrape#index'
   post '/divisor/evaluate', to: 'divisor#evaluate'
