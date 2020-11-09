@@ -1,2 +1,106 @@
-<% provide(:title,'Problem Set 5: Content Management, Part I') %>
-<h1>Problem Set 5: Content Management, Part I</h1>
+<% provide(:title,'Problem Set 5') %>
+
+
+
+<%= render 'layouts/header'%>
+<div class="container mt-3">
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 1 </span> Think about how to classify each of the types of content on your site. Articles, comments on articles,
+				news items, questions and answers, documents to be approved or rejected with comments, and so on.
+				Each type of content will require a different flavor of data model and moderation/approval/versioning
+				process.</h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+            <p class="card-text">
+            	<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-11-09T07:12:10.476Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36\&quot; etag=\&quot;4OWny8sEhPccsRajhpQn\&quot; version=\&quot;13.9.2\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;EnUuoMcyt1ePT6-poadL\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+                </p>
+        </div>
+    </div>
+
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 2 </span> Design your content data model and discuss the implications of your design choices with potential
+				users of the system. In general, there should be at least one category of user-submitted content with
+				authoring workflow specific to your project and at least one question and answer forum. However,
+				the specifics will be very dependent on your project’s requirements. Document the design and your
+				discussions on your site.</h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+            <p class="card-text">
+            	This data model is for registered user. A user can have many post(one to many).There are various category list available for the post in category table(one to many).
+				Our system allows to follow other users.Follow is a table that contains details of followed and followers.
+                 </p>
+                  <p class="card-text">
+                  	<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-11-09T08:10:16.377Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36\&quot; etag=\&quot;QRJ5FxTwMHi94zhGMpL_\&quot; version=\&quot;13.9.2\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;C5RBs43oDa-KdzZeNtuy\&quot; name=\&quot;Page-1\&quot;&gt;7VrbcqM4EP0aPyYlwGD7MXYm8cxmt5LxZJJ9cikgG20EYoV8y9dPCwQW4MTkNpts2eVK0Ud39emTlkzHGUXrc4GT8E8eENaxUbDuOKcd2+4NPPirgE0OOAUwFzTIIWsLTOgD0SDS6IIGJK1UlJwzSZMq6PM4Jr6sYFgIvqpWm3FWHTXBc9IAJj5mTfSGBjLM0b7d2+JjQudhMbLlDfKSCBeV9UrSEAd8ZUDOl44zEpzL/ClajwhTe1fsy83XzQ27uPfOv12l/+Lr4R8//vp5lHd29pwm5RIEieWLu364n52Nf3b/uU0uz65W6Pzk7tuRboKWmC30fl2nROj1yk2xiemKRgzHYA1nPJYTXQJbMMSMzmN49mFu0NIZLomQFPb/RBdIngDqh5QFF3jDF2oFqcT+fWENQy7oA3SLGRRZAECxkJpKtlepMVEtAUaACpJCnctiW6wSusCp1HV8zhhOUnqXTVhVibCY03jIpeRR0RFfxAEJtFX6OTOk4Pclc1T7GWVsxBkX2dY42EbIdsuaRol3huCjt8zAZ9kH8JZu1e5X+0rWBqm1m88Jj4gUG6hSlBaxp0PWcrW92gaA5WksNMnf0yDWQTcv+y6H+w5BiuM5bGc5nu3Uxuu2HM/2qsNhBhSKsSRD5ZDUpDM8GEvdQhnJn0F4q0H4BRB+Cm3UZBxL+UshMY6IAc0W0PXI7pzAKlCtjESYqnGnOAiAf6lRRNMp6JoE/059QbAECmwLGfexpDw2oKwSCaZYmtNJgiYIOsj4Kpt3LVaBJNKIS0Zm8tGoTBPs03h+kdU57W6R79pJCuLQdsayiAhpEJA4ixiJJc6DSk0n4TSWmRfdIXxhl0bo2O24MKER2NbWhq+qLiAiYggZTDPuE4jYFVFRW48vCBXb93fFV+Ddea63M46e1Lr9cbSp0nNv2HS7j4dNhcDPZmuvQdeEwy611Gd00OePqM9dVNXLflt5dl8kz677ieS5v5PwTX2uIpJKZkoyZJy+oElNXWmkckVDQ2mlEagxmXOxqXZ90Ne2+lqK1dsLrP0GAju+HDs/Hsh1PKHL8OtsPL66FUd2g24jzYKDxv5GjW1Qpq3sPqqxXrcqejZqK7Lo/ySyO0nvNEi/VwVrKW/7PPWgpE0l3cP2x4Xq1ULaey8d3ZGonmUnlPSgo59aR51+Vdcc56CjJembyapxLK8d1SFlVXnrUaVor44eFPPFiplL0geWzMGOf8M1f5M4OFF34GDFPJPMUEaFssHyxeYWjCN0jJxegfyt3HZseYV9utZ+zK2NaV0SQWE1SmtzcE3lbdE9POd99ZGn7W1fytgYRr2nfCkkaFzOtztMp3whfPLUYSOvB+I+Jy9hgeF2d4fXC0wQhiVdVhfxhKJdqlgxTvp2TT3tmijm69StzMv7eke9Wjpbv6nNN6LR0VtJXTHv15MVVXnq7qOpZiQ6HvT7FVZ2XfszsPKJa44DK1/LyuZt/u9lpXWMSm3ULfuDj8fKfkuxdA6sfAtWNi+VlpSsoC84DQjyWFJn0LKaDmnamrmThvaelyLI6dQww1VIJZlA/qfGXAmcNE4qWdan7kshn8jOIK0yr5ecKGp+Ln90NGjW3ZXgP3GeeN0dYPM+JMTLT+Cn7nu6ya1FkTX4r93kNtzk47iTvRKiTjAf3l0Oes+oqv3mb7+fu8DcvvSSi+b2zSHnyy8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+            	
+                 </p>
+        </div>
+    </div>
+
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 3 </span> Specify the workflow for each kind of content on your site and discuss the implications of your design choices with potential users of the system. Document the workflow design and your discussions on your site.. </h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+            <p class="card-text">
+                   With the motive to provide a better learning and sharing resources for users to ease in teaching, we have developed this system. Our system is based on allowing users to view the resources shared in the system or (registred users) upload their resources if any. Along with this user can follow other users if interested. In addition to this, content for teaching methods and learning dictionary will be made either by admin or by any other content creators allowed by admin.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 4 </span> Design your versioning system. What is the versioning system for each type of content? Do you need
+				a complete history of every version, or just a current version with the author of the last version? Make
+				sure you think carefully about the needs of the user community. Document the versioning design on
+				your site.</h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+            <p class="card-text">
+              We donot need a complete history of every version for now. We will use git for versioning system as it can itself provide a better space for version control.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card mt-2 mb-2">
+        <div class="card-body mt-2 mb-2">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 5 </span> Write UATs for a “skeletal” implmentation of the workflow for at least one type of content on your
+				site then get the UATs to pass. Users should be able to get something up on your server and see it
+				published </h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+            <p class="card-text">
+               
+            </p>
+
+        </div>
+    </div>
+    
+    <div class="card after-profile">
+     <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <h5 class="card-title">
+                <h5> <span class="badge badge-primary"> 6 </span>  <p>Put your work online and commit to your Git repository when you are done. As with Problem set 3,
+				you should give us access to an administrator account so we can see your document workflow in action</h5>
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
+       			
+       			<p class="card-text">
+               	Please find the username and password attached to this link <a href="https://.com">Visit DOC</a>
+            </p>
+        </div>
+    </div>
+     
+  <br/>
+  <br/>
+  <br/>
