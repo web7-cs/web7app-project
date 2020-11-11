@@ -1,8 +1,9 @@
 <% provide(:title,'Problem Set 5') %>
-
-
-
-<%= render 'layouts/header'%>
+<nav class="navbar">
+  <span class="navbar-brand mb-0 h1"><%= yield(:title) %></span>
+  <span class="justify-end"><%= link_to "Back", root_path %></span>
+</nav>
+<h1 class='display-5 text-center'>Problem set 5 : Content Management, Part I 🚥</h1>
 <div class="container mt-3">
     <div class="card mt-2 mb-2">
         <div class="card-body">
