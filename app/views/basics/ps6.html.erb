@@ -1,7 +1,10 @@
 <% provide(:title,'Problem Set 6') %>
-<h1 class='display-5 text-center'> Peer Evaluation <%= yield(:title) %>
+<nav class="navbar">
+  <span class="navbar-brand mb-0 h1"><%= yield(:title) %></span>
+  <span class="justify-end"><%= link_to "Back", root_path %></span>
+</nav>
 
-<%= render 'layouts/header'%>
+<h1 class='display-5 text-center'> Peer Evaluation <%= yield(:title) %> 💌</h1>
 <div class="container mt-3">
     <div class="card mt-2 mb-2">
         <div class="card-body">
@@ -48,14 +51,14 @@
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">by Smrity and Panuvit</h6>
             <p class="card-text">
-               Till today date (NOV 11), we havenot received criticism from other team members. So we are considering the criticism given by the person outside of AIT.
-               <br>
-               Firstly we would like to thank for the criticism as well as suggestion provided to us. On analysing we have found there are many work that has to be done. Here is the summary of the action we will follow based on criticism received.<br>
-               1. About user registration, authentication as well as contents availablity ,we will work to deploy our registration and content as soon as possible with validations <br>
-               2. We will work into effective Url name convention for our system.<br>
-               3. We will make some guidelines for allowing to post resources for Users. Users will be allowed to post images, pdfs, and short videos related to the topic of the post<br>
-               4.About navigation bar, we are working on building a responsive navigation bar.
-
+                Until this day, 11th November, we have not received any criticism from other team members. However, we are considering the criticism given by the person outside of AIT.<br>
+                Firstly, we would like to thank for the criticism as well as suggestions provided to us. On the analysis, we have found that there are many work that has to be done. Here is the summary of the action we will follow based on criticism received.
+               <ol>
+               <li>About user registration, authentication as well as contents availablity ,we will work to deploy our registration and content as soon as possible with validations </li>
+               <li>We will work into effective Url name convention for our system.</li>
+               <li>We will make some guidelines for allowing to post resources for Users. Users will be allowed to post images, pdfs, and short videos related to the topic of the post</li>
+               <li>About navigation bar, we are working on building a responsive navigation bar.</li>
+                </ol>
                 
         </div>
     </div>

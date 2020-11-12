@@ -8,4 +8,7 @@ class BasicsController < ApplicationController
   def ps5
   end
 
+  def ps6
+  end
+
 end
