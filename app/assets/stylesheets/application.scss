@@ -14,3 +14,15 @@
  *= require_self
  *= require bootstrap
  */
+
+ .centerDiv {
+    align-items: center;
+    margin-top: 10%;
+    position: relative;
+    transform: translate(0,-50%);
+}
+
+#img_round {
+    border-radius: 50%;
+    width: 200px;
+}

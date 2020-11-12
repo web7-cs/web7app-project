@@ -11,4 +11,7 @@ class BasicsController < ApplicationController
   def ps6
   end
 
+  def about_us
+  end
+
 end
