@@ -1,0 +1,24 @@
+<% provide(:title,'About Us') %>
+<nav class="navbar">
+  <span class="navbar-brand mb-0 h1"><%= yield(:title) %></span>
+  <span class="justify-end"><%= link_to "Back", root_path %></span>
+</nav>
+<div class='text-center align-content-center'>
+    <h1 class='display-5'>🙋🏻‍♀️ Meet our team members 🙋🏻‍♂️</h1>
+    <br>
+    <br>
+    <div class='container-fluid row'>
+        <div class='col-sm'>
+            <p class='h3 text-info'>Panuvit Chantara</p>
+            <p><%= image_tag('Panuvit.png',:alt => 'Panuvit_profile', id: 'img_round')%></p>
+            <p><strong>Email:</strong> <%= mail_to 'panuvit.chantara@ait.asia' %><br><strong>Student id:</strong> st121410</p>
+        </div>
+        <div class='col-sm'>
+            <p class='h3 text-info'>Smrity Baral</p>
+            <p><%= image_tag('Smrity.png',:alt => 'Panuvit_profile', id: 'img_round')%></p>
+            <p><strong>Email:</strong> <%= mail_to 'st121662@ait.asia'%> <br><strong>Student id:</strong> st121662</p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
