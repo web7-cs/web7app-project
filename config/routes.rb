@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get '/sql', to: 'sqlsolution#index'
   resources :posts
   resources :divisor
@@ -16,6 +17,14 @@ Rails.application.routes.draw do
   get '/ps4', to: 'basics#ps4'
   get '/ps5', to: 'basics#ps5'
   get '/ps6', to: 'basics#ps6'
+<<<<<<< Updated upstream
+=======
+  get '/about-us', to: 'basics#about_us'
+    get '/homepage', to: 'basics#homepage'
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   get 'divisor/new', to: 'divisor#new'
   get '/scrape', to: 'scrape#index'
   post '/divisor/evaluate', to: 'divisor#evaluate'

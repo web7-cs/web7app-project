@@ -9,4 +9,13 @@ class BasicsController < ApplicationController
   	render 'basics/ps5'
   end
 
+
+
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
+  def homepage
+  end
 end
