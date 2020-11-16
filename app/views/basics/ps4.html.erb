@@ -71,9 +71,10 @@
           User.where("name = '#{params[:name]'") # SQL Injection!<br>
           Prevention : User.where(["name = ?", "#{params[:name]}"]) # No SQL Injection
           <br><h6>Cross-site scripting and Prevention</h6>
-          <p>The most widespread, and one of the most devastating security vulnerabilities in web applications is XSS that is able to send malicious code(a browser side script) to a different end user. There are other many methods to avoid XSS.Luckily, Ruby on Rails has a built-in XSS protection mechanism For example a mechanism in which automatically HTML escapes all the data being transferred from Rails to HTML. we can escape the characters that have special meaning in  HTML  as <br>
+          <p>The most widespread, and one of the most devastating security vulnerabilities in web applications is XSS that is able to send malicious code(a browser side script) to a different end user. There are other many methods to avoid XSS.Luckily, Ruby on Rails has a built-in XSS protection mechanism For example a mechanism in which automatically HTML escapes all the data being transferred from Rails to HTML. we can escape the characters that have special meaning in  HTML i-e HITM_escape as <br>
           Replace & with & amp;<br>
-          Replace < with & lt;<br> (While trying to write & and lt with no space ruby automatically replaced that with <)
+          Replace < with & lt;<br> (While trying to write & and lt with no space ruby automatically replaced that with <) <br>
+          We can also use whietelist of allowed tag or simply use sanitize in rails.
         
       </div>
     </div>
