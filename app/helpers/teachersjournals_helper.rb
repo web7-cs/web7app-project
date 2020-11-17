@@ -1,0 +1,2 @@
+module TeachersjournalsHelper
+end
