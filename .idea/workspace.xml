@@ -26,13 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3198b0c9-5443-406a-a772-b8ad90832ab1" name="Default Changelist" comment="Smrity - Change message in Basic">
-      <change afterPath="$PROJECT_DIR$/app/views/quotations/sort.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20201018152039_create_quotations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/basics/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/basics/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-    </list>
+    <list default="true" id="3198b0c9-5443-406a-a772-b8ad90832ab1" name="Default Changelist" comment="Smrity - Change message in Basic" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,6 +175,7 @@
       <workItem from="1602419944849" duration="1074000" />
       <workItem from="1603194360111" duration="50000" />
       <workItem from="1603194427278" duration="4397000" />
+      <workItem from="1605584078832" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="Smrity - Change message in Basic">
       <created>1602420492400</created>
@@ -248,7 +243,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/views/quotations/index.html.erb</url>
-          <line>15</line>
+          <line>13</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
