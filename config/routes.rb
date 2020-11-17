@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'teachersjournals/', to: 'teachersjournals#home'
+  
   devise_for :users
   get '/sql', to: 'sqlsolution#index'
   resources :posts
