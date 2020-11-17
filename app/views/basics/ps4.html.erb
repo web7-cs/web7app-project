@@ -63,6 +63,20 @@
         <h3 class="card-title"> 
             <h4><span class="badge badge-primary">3</span> Learn how to avoid SQL injection and XSS attacks in your development framework and document and follow your plan for the rest of the project.</h4>
         </h3>
+        <p class='card-text'>
+          <br><h6>Sql Injection and Prevention</h6>
+          SQL Injection (SQLi) is a type of an injection attack that makes it possible to execute malicious SQL statements. These statements control a database server behind a web application. Attackers can use SQL Injection vulnerabilities to bypass application security measures. They can go around authentication and authorization of a web page or web application and retrieve the content of the entire SQL database. They can also use SQL Injection to add, modify, and delete records in the database.<br>
+          The only sure way to prevent SQL Injection attacks is input validation and parametrized queries including prepared statements.
+          <br>
+          For Example :<br>
+          User.where("name = '#{params[:name]'") # SQL Injection!<br>
+          Prevention : User.where(["name = ?", "#{params[:name]}"]) # No SQL Injection
+          <br><h6>Cross-site scripting and Prevention</h6>
+          <p>The most widespread, and one of the most devastating security vulnerabilities in web applications is XSS that is able to send malicious code(a browser side script) to a different end user. There are other many methods to avoid XSS.Luckily, Ruby on Rails has a built-in XSS protection mechanism For example a mechanism in which automatically HTML escapes all the data being transferred from Rails to HTML. we can escape the characters that have special meaning in  HTML i-e HITM_escape as <br>
+          Replace & with & amp;<br>
+          Replace < with & lt;<br> (While trying to write & and lt with no space ruby automatically replaced that with <) <br>
+          We can also use whietelist of allowed tag or simply use sanitize in rails.
+        
       </div>
     </div>
   </div>
@@ -99,6 +113,16 @@
         <h3 class="card-title"> 
             <h4><span class="badge badge-primary">6</span> Sketch your user registration and management page flow.</h4>
         </h3>
+        <h4> User Registration</h4>
+        <p class='card-text'>
+          <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-11-16T05:13:34.421Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\&quot; etag=\&quot;Lq-ktDP96bFMwI22ZpIz\&quot; version=\&quot;13.9.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;A7XaZ8Xkbh1KRkmEmF1b\&quot; name=\&quot;Page-1\&quot;&gt;7Vrfc9soEP5r/JiMJCTZeUyc+DI3Ta/T3FzbRyphiQsSHoRju3/9gQX67VgXW6Jp+uIxK0Dw7X67y6IJmCfbPxhcxQ80RGTiWOF2Am4njjO98sWvFOxyAdCCiOEwF9ml4BH/QEpoKekahyirdeSUEo5XdWFA0xQFvCaDjNFNvduSkvpbVzBCLcFjAElb+gWHPM6lM88q5fcIR7F+s22pJwnUnZUgi2FINxURuJuAOaOU5/+S7RwRiZ3GJR+3OPC0WBhDKe8zYM2Wf1p/Bbv4wZ9/fYqyTXgbXgC9OL7TO0ahAEA1KeMxjWgKyV0pvWF0nYZITmuJVtnnA6UrIbSF8F/E+U5pE645FaKYJ0Q9zd8pX3RwL0qU0TUL0AsbcJRNQBYh/kI/r0BcWCqiCeJsJ8YxRCDHz/V1QGUzUdGvhFX8Ucj+D5TVIp8hWas33YuZtfU1FVDCK7HaxJijxxXco7ARHKtDuaQpVzjbYoM3EYFZpjSTcUafCrOVvQsbtAotPCPG0fZlPbRxUwN8ZT6a3Kq5KZlia/OPKyxxraGAnpowZ7TF/Kscfump1rfKk9utmnnf2OlGKvabD3JdRwvkuAvr0gJAS8rR+1Zt+CfEsMANsZpCz0IrryetHP9EXu2HXjMGd5UOK4pTnlVm/iQFpdkVRqXtzpk1TCefsTSkYmmvty1gG7Gtwk6qNqIs7QUDMWALp5rCScz3Wi72mjAEw3wFEc4ETaQeFm13G9Pk+zo77mprzlP63QVMMJGA3yPyjDgOYIdDhgRHqWgEAnfJ1C6vLF6J00i0/LL1995ALtzzOOppnTC21+GprQ5PPRvKU/stfT0KnNartxwNQSMc2lPT8fDNhMMzuiu/p7uyrW5ljuOvZu9QM/pMd1w1jknVXJlUjV1RTKmmYzmksdygv0pdkyrVy6yEm39EYA4hl7WFE3KCc0SNWT1qFIeqStSYjRmabTOJrvZNb4wAYxUgXnVQamYkOg9cHOjvndTdvrIaxjfAMUwDXqHy5zK/d6yPIqM7KYccIBF07Z6JoD8Yp4HZfGNaTTisfqS2zZHa7Ulqo0devcoKE+4Yo0yIEpRlJ5cWz0AEHzSI4HQQwR6VCO1CwTeUtYASW+aN0//++DinhMpyW0pTyZAlJqQhap33JYA4gORaPUhwGO7p1QV/nXLncEVTt6YB4LY14HYowBlMAe2T/+di4l9SBdNmtbIjGoyrgun74oDd8EKOcQ7MWgr4SHvg3x9XhjL8A37fTyVRVImimNe7mXi3ci4RrTNVKjsPzO6VV4e5o/wFRoXZzEm+vNkpUpYi6xknfyluyo9e3xgttBQ3478rLefUqdFKi5644trmMQqehEhVXDBN27FmzIJLo97imq63OO0T7eM6EBn8ck2IXPcHGkX7sy1O28CNndHXwfONn2wd8M6SmUY26XZc5Y2azDhG6+X1q4yelQXrcubUYvOFdeke8+VDf3Lh9C06OEZKic1iH/DshukMUOxzDpc4Hn6SEocuempcPOD184hgMEK2Sxy9Thdv1SE2P0LriOfjOkQzd7s/QYra9+o9j9mmvxrTVflDtxtH+g/k8drlsYWgoNiWRWgkE0BrSVli3O01PigCfT/9fEUeKJrlV9I5zuWn5uDuPw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+        </p>
+        <h4>User Management</h4>
+        <p class='card-text'><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-11-16T06:14:47.568Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\&quot; etag=\&quot;HszpSIG8CMkRiFyrsoIb\&quot; version=\&quot;13.9.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;A7XaZ8Xkbh1KRkmEmF1b\&quot; name=\&quot;Page-1\&quot;&gt;5Vpdc6M2FP01fowHJMD4MXHi3XY23cyk3SZPHQVkUAPII+TY7q/vFd8CZ0Oa2Ep3XzzoIiR0z7nnXglP8CLdfRJkHV/zkCYTZIW7Cb6cIDSbe/CrDPvSgGtDJFhYmuzWcMv+oZXRqqwbFtJc6yg5TyRb68aAZxkNpGYjQvCt3m3FE33WNYnowHAbkGRo/ZOFMi6tvmu19s+URXE9s21Vd1JSd64MeUxCvu2Y8NUELwTnsrxKdwuaKN/VfimfWz5zt3kxQTM55oGNWP1qfQ328bW3uHuM8m14GZ7h+uXkvl4xDcEBVZMLGfOIZyS5aq0Xgm+ykKphLWi1fb5wvgajDca/qZT7Ck2ykRxMsUyT6m45p5ro2bXUWBMRUfmdBbiNJ4GBlKdUij08J2hCJHvSxycVF6KmX/PoDWcwM7Iq2to1aBVrZ5Y+Qs43IqDVQ63P4aLzFq2pQOIVqLhGUAHfi/2den7qOo3hvjBYbt2+3FUzlK19t3VDBYO1U1EZx+NcOvQlnEfwAXlvJISG5auBs40At2PyrnNdQuZWrRYw1dDwKsH2wWcdsO2phfH/BG1nZhTtctwnkmyqmX7J/yJhyrIJXg6IIGKePmzgHS62MZP0dk0KF2whbepwNolCOXXFM7kkKUuU6z/T5IlKFpDqRsUIG1xwQRIWwbyXAThbQXKRS8Efm6RVDAxTsiyClte2fi9IduY0AD5RIenu+xAOPV7ne1037VrJtm3ubDJk3MmbvnUkjOzZAKR7qCf64MCKZQ+Fwn0LnnDF74xnKlRXLEl6poHflf8AouS8upGyMCzi/BDseuy/AwA21hFAzhAB5wAA6FgAIDO57E2SqOe+l1LfO+re6LIHOUaFDxmuTxwI6w5GZ1CgtBZDOWs8dsgkdvXAHUFcxDR4BNM30LIQXoFnQ4Ecnb3eP4m43lDC/FPmEMcxKWGtbN137rxY1bmaiJ1QwtDIMHDfWqmP3LrNe7QoX+xoe7d6/Z34ut0ENM9XmyRR6/vCowh4AcNkwyhrSGOfJNI83Veef6BcQwdCzTtatYB/7nLNM12uOWZTu21KtZyxyfs4B05orvMAu+NU61wIsu90W6sO+fPz4B7fsGf1KFOO+L6S6AyC+koIiEpkXYMwqhNY00LYBFldc/juOCXER1PC4enCb/wHFkLvMDGNCSH2jAhhU/Sh/1T1YQd9vI2RN1JbMX4PbX2tJNqWrTNvfgpJ9AbRHXEgA5BbSvVp61y9AFpu6cNsGuRTwuSUBFOIBLQsTxhNK2Y/keADpePslKUjnhmtXKyp4/v6wZHVGgyFHsZjy5pnwD526M31rGv3PmG+rv9xQhUPtyRLVjyWQ6JUkWituEiNB2QvgTqzkXu5o1Uwdbr+WSoYv1dCHgDgtFu54aePT0WO8UiqPJA95CULX0o4xqnt9qh9gNnzkzJ7PmT21x+X2cjS/W+brs3d4Ybyj5wW+0mSwXYyVQtDXqLc/wBmL1JXCw7eLNJJt9fHUu35oTLqpCdwrm+4jDJ1cO2O3aa4Zr+9DXcO5+WGwLr5CCcpPUL79vEIDc3273Nludf+BxFf/Qs=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+
+        </p>
       </div>
     </div>
   </div>
@@ -130,6 +154,7 @@ Again using BDD, build the user administration pages. Make sure admin can 1) see
         <h3 class="card-title"> 
             <h4><span class="badge badge-primary">10</span> Check your model for referential integrity and queries that take a long time and might require further optimization</h4>
         </h3>
+        <p class ="card-body">Forign keys contraints will be used for maintaining referential integrity for links between tables</p>
       </div>
     </div>
   </div>

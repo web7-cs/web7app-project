@@ -14,4 +14,13 @@ class BasicsController < ApplicationController
   def about_us
   end
 
+
+
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
+  def homepage
+  end
 end

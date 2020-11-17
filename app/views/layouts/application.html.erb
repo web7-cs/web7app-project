@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
@@ -24,12 +23,35 @@
       <div class='container-fluid'>
         <div class="row h-100 justify-content-center">
           <div class='col-lg-10 align-self-end'>
-          <%= yield %>
+          
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <br>
       <br>
+=======
+<<<<<<< Updated upstream
+      <br />
+      <br />
+>>>>>>> 1448a4b40327bd3b935c820e057a56b76a2ce31a
       <%= render 'layouts/footer'%>
+=======
+      <br>
+      <br>
+      <% if notice %>
+
+      <div class="container alert alert-primary" role="alert">
+        <%= notice %>
+      </div>
+      <% end %>
+       <p class="alert"><%= alert %></p>
+
+       <%= yield %>   
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   </body>
+  <%= render 'layouts/footer'%>
 </html>
