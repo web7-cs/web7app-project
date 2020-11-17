@@ -23,35 +23,12 @@
       <div class='container-fluid'>
         <div class="row h-100 justify-content-center">
           <div class='col-lg-10 align-self-end'>
-          
+            <%= yield %>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <br>
       <br>
-=======
-<<<<<<< Updated upstream
-      <br />
-      <br />
->>>>>>> 1448a4b40327bd3b935c820e057a56b76a2ce31a
       <%= render 'layouts/footer'%>
-=======
-      <br>
-      <br>
-      <% if notice %>
-
-      <div class="container alert alert-primary" role="alert">
-        <%= notice %>
-      </div>
-      <% end %>
-       <p class="alert"><%= alert %></p>
-
-       <%= yield %>   
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   </body>
-  <%= render 'layouts/footer'%>
 </html>
